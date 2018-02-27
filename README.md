@@ -6,7 +6,7 @@ Sampling simulations and exploratory data analysis of the National Pokédex, inc
 ## Scripts
 
 - [Random Sampling Simulations](Pokemon_Sampling.ipynb)
-- [Exploratory Data Analysis Part 2 (cross tabulations, grouping, binning, and histograms)](Pokemon_EDA2.ipynb)
+- [Exploratory Data Analysis Part 2 (cross tabulations, grouping, and binning)](Pokemon_EDA2.ipynb)
 - [Exploratory Data Analysis Part 1 (table manipulation, sorting, and visualizations)](Pokemon_EDA1.ipynb)
 
 -----
