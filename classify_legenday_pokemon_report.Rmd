@@ -12,7 +12,7 @@ library(ggplot2)
 
 ## Introduction
 
-A legendary Pokemon is a rare special Pokemon that has a number of distinguishing features - it is usually powerful, hard to capture, and gains experience slowly. With these factors in mind, we develop a classifier to predict whether a given Pokemon is legendary or not.
+A legendary Pokemon is a rare Pokemon that has a number of distinguishing features - it is usually powerful, hard to capture, and gains experience slowly. With these factors in mind, we develop a classifier to predict whether a given Pokemon is legendary or not.
 
 ## Cleaning Data
 
