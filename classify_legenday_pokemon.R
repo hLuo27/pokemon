@@ -52,4 +52,12 @@ classify <- function(x){
   names(which.max(table(closest$is_legendary)))
 }
 
-classify(testing[1,])
+# Dataframe with predictions based on tables
+predicted_class = numeric()
+for(i in 1:nrow(testing)){
+  predicted_class = c(predicted_class, classify(testing[i,]))
+}
+
+predicted_testing = testing %>% mutate('predicted_legendary' = predicted_class) 
+
+sum(predicted_testing$is_legendary == predicted_testing$predicted_legendary)/nrow(predicted_testing)
