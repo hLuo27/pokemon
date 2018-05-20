@@ -49,8 +49,10 @@ distance <- function(train_row = training[1,], test_row = testing[1,]){
   return(sqrt(total))
 }
 
-# Classify row (x) in testing set
-
+#' @title classify
+#' @description Predict whether a Pokemon in the testing set will be legendary or not by looking at its 3 nearest neighbours in the training set
+#' @param x A row in the testing set to predict
+#' @return Whether a Pokemon is predicted to be legendary (1) or not (0)
 classify <- function(x){
   closest = training %>% mutate('Distance' = distance(training, x)) %>% arrange(Distance) %>% slice(1:3) # Select 3 closest pokemon in training set
   names(which.max(table(closest$is_legendary)))
