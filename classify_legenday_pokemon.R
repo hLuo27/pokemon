@@ -5,7 +5,8 @@ pokemon = read.csv('pokemon.csv', stringsAsFactors = FALSE)
 # Features selected are base total, capture rate, and experience growth. Name, pokedex number, and legenadry status kept for identification purposes.
 
 pokemon = pokemon %>% select(name, pokedex_number, base_total, capture_rate, experience_growth, is_legendary)
-head(pokemon)
+
+non_standardized_pokemon = pokemon
 
 # Now we normalize each of the features
 normalize_feature <- function(x){
@@ -35,8 +36,11 @@ for (i in 1:n){
 training = pokemon[training_indices,]
 testing = pokemon[testing_indices,] 
 
-# Distance function to calculate distance between features of two pokemon
-
+#' @title distance
+#' @description Find distance between two points (Pokemon) in 3 features
+#' @param train_row A row in the training set
+#' @param test_row A row in the testing set
+#' @return The Euclidian distance between the two points in the 3 features selected
 distance <- function(train_row = training[1,], test_row = testing[1,]){
   total = 0
   for (i in 3:5){
@@ -60,4 +64,5 @@ for(i in 1:nrow(testing)){
 
 predicted_testing = testing %>% mutate('predicted_legendary' = predicted_class) 
 
-sum(predicted_testing$is_legendary == predicted_testing$predicted_legendary)/nrow(predicted_testing)
+accuracy = sum(predicted_testing$is_legendary == predicted_testing$predicted_legendary)/nrow(predicted_testing)
+accuracy
