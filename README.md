@@ -21,7 +21,7 @@ Classifying legendary pokémon using k-means clustering with 98.8% accuracy; sam
 ## Packages Used (R)
 
 - dplyr
-= ggplot2
+- ggplot2
 
 ----
 
