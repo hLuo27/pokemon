@@ -49,7 +49,7 @@ head(non_standardized_pokemon, 3)
 ``` r
 ggplot(data = non_standardized_pokemon) +
   geom_histogram(aes(x = base_total), bins = 10) + 
-  ggtitle('Distribution of Base Total of All pokemon') + 
+  ggtitle('Distribution of Base Total Stat of All Pokémon') + 
   labs(x = 'Base Total', y = 'Count') +
   theme_minimal()
 ```
@@ -161,6 +161,8 @@ classify <- function(x){
 ```
 
 For example, we can correctly predict that Mew, a Pokémon in the testing set, is legendary.
+
+![Image of Mew](https://raw.githubusercontent.com/hLuo27/pokemon/master/images/mew.jpg)
 
 ``` r
 classify(testing[testing$name=='Mew',])
