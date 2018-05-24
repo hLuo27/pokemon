@@ -14,6 +14,8 @@ library(ggplot2)
 
 A legendary Pokémon is a rare Pokémon that has a number of distinguishing features - it is usually powerful, hard to capture, and gains experience slowly. With these factors in mind, we develop a classifier to predict whether a given Pokémon is legendary or not.
 
+![Image of Ho-Oh](https://raw.githubusercontent.com/hLuo27/pokemon/master/images/ho_oh.png)
+
 ## Data
 
 The data used consists of all 801 Pokémon from the National Pokédex (Generations I-VII) consisted of 6 variables:

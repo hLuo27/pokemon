@@ -1,7 +1,7 @@
 Classifying Legendary pokemon
 ================
 Hubert Luo
-May 19, 2018
+May 24, 2018
 
 ``` r
 library(dplyr)
@@ -13,8 +13,10 @@ Introduction
 
 A legendary Pokémon is a rare Pokémon that has a number of distinguishing features - it is usually powerful, hard to capture, and gains experience slowly. With these factors in mind, we develop a classifier to predict whether a given Pokémon is legendary or not.
 
-Cleaning Data
--------------
+![Image of Ho-Oh](https://raw.githubusercontent.com/hLuo27/pokemon/master/images/ho_oh.png)
+
+Data
+----
 
 The data used consists of all 801 Pokémon from the National Pokédex (Generations I-VII) consisted of 6 variables:
 
@@ -53,6 +55,9 @@ ggplot(data = non_standardized_pokemon) +
 ```
 
 ![](classify_legenday_pokemon_report_files/figure-markdown_github/unnamed-chunk-2-1.png)
+
+Data Wrangling
+--------------
 
 In order to use the data in the classifier, we normalized the data as they all follow different scales. The first 3 rows of the normalized data are displayed below.
 
